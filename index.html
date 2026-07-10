@@ -22,6 +22,13 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+            <style>
+        @media (max-width: 768px) {
+            .event-item {
+                flex: 1 1 100% !important;
+            }
+        }
+    </style>
     </head>
 
     <body>
@@ -596,60 +603,76 @@
 
                 <div class="donate-form" 
                      style="background:#1fa83f; padding:30px; border-radius:15px; color:white;">
+<!--this is a test paymen -->
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 
-                    <!-- PAYPAL FORM -->
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+    <!-- PayPal: Product Purchase -->
+    <input type="hidden" name="cmd" value="_xclick">
 
-                        <!-- PayPal Required Fields -->
-                        <input type="hidden" name="cmd" value="_donations">
-                        <input type="hidden" name="business" value="jaganalamin@gmail.com">
-                        <input type="hidden" name="currency_code" value="USD">
+    <!-- Your PayPal email (money goes here) -->
+    <input type="hidden" name="business" value="jaganalamin@gmail.com">
 
-                        <!-- Name -->
-                        <div class="control-group" style="margin-bottom:15px;">
-                            <input type="text" name="first_name" class="form-control" placeholder="Name" required
-                                   style="width:100%; padding:12px; border-radius:8px; border:none;">
-                        </div>
+    <!-- Product name -->
+    <input type="hidden" name="item_name" value="Support Payment">
 
-                        <!-- Email -->
-                        <div class="control-group" style="margin-bottom:15px;">
-                            <input type="email" name="email" class="form-control" placeholder="Email" required
-                                   style="width:100%; padding:12px; border-radius:8px; border:none;">
-                        </div>
+    <!-- Currency -->
+    <input type="hidden" name="currency_code" value="EUR">
 
-                        <!-- Donation Amounts (Flexbox) -->
-                        <div style="display:flex; gap:15px; margin:20px 0;">
+    <!-- Name -->
+    <div style="margin-bottom:15px;">
+        <input type="text" name="first_name" placeholder="Your Name" required
+               style="width:100%; padding:12px; border-radius:8px; border:none;">
+    </div>
 
-                            <label style="background:#158c33; padding:12px 25px; border-radius:10px; 
-                                          cursor:pointer; font-weight:bold; color:white;">
-                                <input type="radio" name="amount" value="10" checked style="display:none;">
-                                $10
-                            </label>
+    <!-- Amount -->
+    <div style="margin-bottom:15px;">
+        <input type="number" name="amount" placeholder="Enter Amount" required
+               style="width:100%; padding:12px; border-radius:8px; border:none;">
+    </div>
 
-                            <label style="background:#158c33; padding:12px 25px; border-radius:10px; 
-                                          cursor:pointer; font-weight:bold; color:white;">
-                                <input type="radio" name="amount" value="20" style="display:none;">
-                                $20
-                            </label>
+    <!-- Submit -->
+    <button type="submit"
+            style="background:white; color:#1fa83f; font-weight:bold;
+                   padding:12px 25px; border-radius:10px; border:none; width:100%;">
+        Donate Now
+    </button>
 
-                            <label style="background:#158c33; padding:12px 25px; border-radius:10px; 
-                                          cursor:pointer; font-weight:bold; color:white;">
-                                <input type="radio" name="amount" value="30" style="display:none;">
-                                $30
-                            </label>
+</form>
 
-                        </div>
 
-                        <!-- Submit Button -->
-                        <div>
-                            <button type="submit" 
-                                    style="background:white; color:#1fa83f; font-weight:bold; 
-                                           padding:12px 25px; border-radius:10px; border:none; width:100%;">
-                                Donate Now
-                            </button>
-                        </div>
 
-                    </form>
+
+                              <!-- this is 
+
+                  
+
+<form action="https://www.paypal.com/donate" method="post" target="_blank">
+
+    <input type="hidden" name="business" value="lajoiepartagee@gmail.com">
+
+    <input type="hidden" name="cmd" value="_donations">
+
+    <input type="hidden" name="currency_code" value="ERU">
+
+    <div style="margin-bottom:15px;">
+        <input type="text" name="first_name" placeholder="Your Name" required
+               style="width:100%; padding:12px; border-radius:8px; border:none;">
+    </div>
+
+    <div style="margin-bottom:15px;">
+        <input type="number" name="amount" placeholder="Enter Amount" required
+               style="width:100%; padding:12px; border-radius:8px; border:none;">
+    </div>
+
+    <button type="submit"
+            style="background:white; color:#1fa83f; font-weight:bold;
+                   padding:12px 25px; border-radius:10px; border:none; width:100%;">
+        Donate Now
+    </button>
+
+</form>
+
+-->
 
                 </div>
 
@@ -676,92 +699,133 @@
         <div class="events-flexbox">
 
             <!-- EVENT 1 -->
-            <div class="event-item">
+            <!-- Event Start -->
+<div class="event" style="padding: 40px 0;">
+
+    <div class="container">
+
+        <div class="section-header text-center">
+            <p>Events</p>
+            <h2>Be ready for our upcoming charity events</h2>
+        </div>
+
+        <!-- FLEXBOX WRAPPER -->
+        <div class="events-flexbox" 
+             style="display:flex; flex-wrap:wrap; gap:30px; justify-content:center;">
+
+            <!-- EVENT 1 -->
+            <div class="event-item" 
+                 style="background:#fff; border-radius:10px; overflow:hidden; 
+                        flex:1 1 45%; min-width:300px; 
+                        box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+
                 <div class="event-images">
-                    <img src="img/lajoiepartagee15.jpg" alt="lajoiepartagee15">
+                    <img src="img/lajoiepartagee15.jpg" alt="lajoiepartagee15" 
+                         style="width:100%; height:auto; display:block;">
                 </div>
 
-                <div class="event-content">
-                    <div class="event-meta">
-                        <p><i class="fa fa-calendar-alt"></i>01-Jan-2025</p>
-                        <p><i class="far fa-clock"></i>8:00 - 10:00</p>
-                        <p><i class="fa fa-map-marker-alt"></i>Cameroon</p>
+                <div class="event-content" style="padding:20px;">
+                    <div class="event-meta" style="font-size:14px; color:#555;">
+                        <p><i class="fa fa-calendar-alt"></i> 01-Jan-2025</p>
+                        <p><i class="far fa-clock"></i> 8:00 - 10:00</p>
+                        <p><i class="fa fa-map-marker-alt"></i> Cameroon</p>
                     </div>
 
                     <div class="event-text">
-                        <h3>Sharing Compassion and Nourishment with Street Children</h3>
-                        <p>
+                        <h3 style="margin-top:10px; font-size:20px; font-weight:bold;">
+                            Sharing Compassion and Nourishment with Street Children
+                        </h3>
+                        <p style="margin-top:10px; font-size:15px; line-height:1.6;">
                             This moment captures the heart of La Joie Partagée’s mission: offering care, dignity, and hope to children
-                            living in vulnerable conditions. During this activity, our volunteers distributed food and spent meaningful
-                            time with the children, creating an atmosphere of warmth, kindness, and human connection.
+                            living in vulnerable conditions. Our volunteers distributed food and spent meaningful time with the children.
                         </p>
-                        <a class="btn btn-custom" href="">Join Now</a>
+                        <a class="btn btn-custom" href="#donate" style="margin-top:15px; display:inline-block;">Join Now</a>
                     </div>
                 </div>
             </div>
 
             <!-- EVENT 2 -->
-            <div class="event-item">
+            <div class="event-item" 
+                 style="background:#fff; border-radius:10px; overflow:hidden; 
+                        flex:1 1 45%; min-width:300px; 
+                        box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+
                 <div class="event-images">
-                    <img src="img/lajoiepartagée16.jpg" alt="lajoiepartagée16">
+                    <img src="img/lajoiepartagée16.jpg" alt="lajoiepartagée16" 
+                         style="width:100%; height:auto; display:block;">
                 </div>
 
-                <div class="event-content">
-                    <div class="event-meta">
-                        <p><i class="fa fa-calendar-alt"></i>22-Feb-2025</p>
-                        <p><i class="far fa-clock"></i>11:00 - 15:00</p>
-                        <p><i class="fa fa-map-marker-alt"></i>Cameroon</p>
+                <div class="event-content" style="padding:20px;">
+                    <div class="event-meta" style="font-size:14px; color:#555;">
+                        <p><i class="fa fa-calendar-alt"></i> 22-Feb-2025</p>
+                        <p><i class="far fa-clock"></i> 11:00 - 15:00</p>
+                        <p><i class="fa fa-map-marker-alt"></i> Cameroon</p>
                     </div>
 
                     <div class="event-text">
-                        <h3>22 February 2025 – A Day of Sharing and Engagement with Street Children</h3>
-                        <p>
-                            On 22 February 2025, La Joie Partagée organized another meaningful gathering with street children, bringing
-                            together 58 participants for a day focused on exchange, awareness, and togetherness.
+                        <h3 style="margin-top:10px; font-size:20px; font-weight:bold;">
+                            22 February 2025 – A Day of Sharing and Engagement
+                        </h3>
+                        <p style="margin-top:10px; font-size:15px; line-height:1.6;">
+                            La Joie Partagée brought together 58 participants for a day focused on exchange, awareness, and togetherness.
                         </p>
-                        <a class="btn btn-custom" href="">Join Now</a>
+                        <a class="btn btn-custom" href="#donate" style="margin-top:15px; display:inline-block;">Join Now</a>
                     </div>
                 </div>
             </div>
 
             <!-- EVENT 3 -->
-            <div class="event-item">
+            <div class="event-item" 
+                 style="background:#fff; border-radius:10px; overflow:hidden; 
+                        flex:1 1 45%; min-width:300px; 
+                        box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+
                 <div class="event-images">
-                    <img src="img/lajoiepartagée20.jpg" alt="lajoiepartagée20">
+                    <img src="img/lajoiepartagée20.jpg" alt="lajoiepartagée20" 
+                         style="width:100%; height:auto; display:block;">
                 </div>
 
-                <div class="event-content">
-                    <div class="event-meta">
-                        <p><i class="fa fa-calendar-alt"></i>01-Jan-2025</p>
-                        <p><i class="far fa-clock"></i>8:00 - 10:00</p>
-                        <p><i class="fa fa-map-marker-alt"></i>Cameroon</p>
+                <div class="event-content" style="padding:20px;">
+                    <div class="event-meta" style="font-size:14px; color:#555;">
+                        <p><i class="fa fa-calendar-alt"></i> 01-Jan-2025</p>
+                        <p><i class="far fa-clock"></i> 8:00 - 10:00</p>
+                        <p><i class="fa fa-map-marker-alt"></i> Cameroon</p>
                     </div>
 
                     <div class="event-text">
-                        <h3>Future Event Title</h3>
-                        <p>Future event description goes here.</p>
-                        <a class="btn btn-custom" href="">Join Now</a>
+                        <h3 style="margin-top:10px; font-size:20px; font-weight:bold;">Future Event Title</h3>
+                        <p style="margin-top:10px; font-size:15px; line-height:1.6;">
+                            Future event description goes here.
+                        </p>
+                        <a class="btn btn-custom" href="#donate" style="margin-top:15px; display:inline-block;">Join Now</a>
                     </div>
                 </div>
             </div>
 
             <!-- EVENT 4 -->
-            <div class="event-item">
+            <div class="event-item" 
+                 style="background:#fff; border-radius:10px; overflow:hidden; 
+                        flex:1 1 45%; min-width:300px; 
+                        box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+
                 <div class="event-images">
-                    <img src="img/lajoiepartagee14.jpg" alt="lajoiepartagée14">
+                    <img src="img/lajoiepartagee14.jpg" alt="lajoiepartagée14" 
+                         style="width:100%; height:auto; display:block;">
                 </div>
 
-                <div class="event-content">
-                    <div class="event-meta">
-                        <p><i class="fa fa-calendar-alt"></i>01-Jan-2045</p>
-                        <p><i class="far fa-clock"></i>8:00 - 10:00</p>
-                        <p><i class="fa fa-map-marker-alt"></i>Cameroon</p>
+                <div class="event-content" style="padding:20px;">
+                    <div class="event-meta" style="font-size:14px; color:#555;">
+                        <p><i class="fa fa-calendar-alt"></i> 01-Jan-2045</p>
+                        <p><i class="far fa-clock"></i> 8:00 - 10:00</p>
+                        <p><i class="fa fa-map-marker-alt"></i> Cameroon</p>
                     </div>
 
                     <div class="event-text">
-                        <h3>Future Event Title</h3>
-                        <p>Future event description goes here.</p>
-                        <a class="btn btn-custom" href="">Join Now</a>
+                        <h3 style="margin-top:10px; font-size:20px; font-weight:bold;">Future Event Title</h3>
+                        <p style="margin-top:10px; font-size:15px; line-height:1.6;">
+                            Future event description goes here.
+                        </p>
+                        <a class="btn btn-custom" href="#donate" style="margin-top:15px; display:inline-block;">Join Now</a>
                     </div>
                 </div>
             </div>
@@ -770,6 +834,7 @@
     </div>
 </div>
 <!-- Event End -->
+
 
 
 
